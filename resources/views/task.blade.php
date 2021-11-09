@@ -26,12 +26,16 @@
         </div>        
 <main class="max-w-lg mx-auto mt-10 bg-gray-100 border border-gray-200 p-6 rounded-xl">
             <h1 style="color:solid black;"  class="text-center font-bold text-xl">Create Task</h1>
-            <form method="get" action="/task" class="mt-10" id="usrform">
+            <form method="POST" action="/task" class="mt-10" id="usrform">
+                @csrf
                 <label for="fname">Name:</label>
-                <input type="text" id="fname" name="fname"><br><br>
-                <textarea rows="4" cols="50" name="comment" form="usrform">Enter task here...</textarea>
-                <input type="checkbox" id="task">
+                <input type="text" id="fname" name="name"><br><br>
+                <textarea rows="4" cols="50" name="task" form="usrform">Enter task here...</textarea>
+                <input type="checkbox" id="task" name="completed">
                 <label for="task">Completed</label><br>   
+                <button type="submit" >Create Task</button>
+                <br/>
+        
             </form>
         </main> 
     </section>

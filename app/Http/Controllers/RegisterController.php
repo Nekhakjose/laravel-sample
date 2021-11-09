@@ -18,7 +18,7 @@ class RegisterController extends Controller
         'username' => 'required|min:3|max:255',
         'email' => 'required|email|max:255',
         'password' => 'required|min:7|max:255',
-        'confirm password'=>'required|min:7|max:255',
+        'confirm password'=>'required|min:7|max:255', 
       ]);
       User::create($attributes);
 
