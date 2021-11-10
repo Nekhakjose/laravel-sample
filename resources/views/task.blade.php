@@ -10,20 +10,30 @@
 </head>
 <body>
     <section class="px-6 py-8">
-      <div class="navbar">
-          <div class="container">
-              <div class="logo_div">
-                  <img src="/Images/logo.png" alt="" class="logo"/>
-              </div>
-              <div align="center" class="navbar_link">
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="#">Home</a>
-                    </li>
-                </ul>   
-              </div>
+        <nav class="md:flex md:justify-between md:items-center">
+            <div>
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo.png">
+                </a>
             </div>
-        </div>        
+            <div class="mt-8 md:mt-0 flex items-center">
+            <a href="/" class="text-xs font-bold uppercase">Home Page</a>
+            <div class="mt-8 md:mt-0 flex items-center">
+             @auth
+                <span class="text-xs font-bold uppercase">Welcome, {{ auth()->user()->name }}!</span>
+
+                <form method="POST" action="/logout" class="text-xs font-semibold text-blue-500 ml-6">
+                    @csrf
+
+                    <button type="submit">Log Out</button>
+                </form>
+             @else
+                <a href="/register" class="text-xs font-bold uppercase">Register</a>
+                <a href="/login" class="ml-6 text-xs font-bold uppercase">Log In</a>
+            @endauth
+        </div>  
+        </div>
+        </nav>   
 <main class="max-w-lg mx-auto mt-10 bg-gray-100 border border-gray-200 p-6 rounded-xl">
             <h1 style="color:solid black;"  class="text-center font-bold text-xl">Create Task</h1>
             <form method="POST" action="/task" class="mt-10" id="usrform">
