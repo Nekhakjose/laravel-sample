@@ -36,6 +36,9 @@ Route::get('/login', function () {
 Route::get('/task', function () {
     return view('task');
 });
+Route::get('/edit', function () {
+    return view('edit');
+});
 Route::post('/task', [TaskController::class, 'store']);
 Route::post('/register', [RegisterController::class, 'store'])->middleware('guest');
 Route::post('/login', [SessionController::class, 'store'])->middleware('guest');

@@ -12,10 +12,11 @@ class SessionController extends Controller
 {
 
 
-    public function store()
+    public function store(Request $request)
     {
-        $attributes = request->validate([
+        $attributes = $request->validate([
             'name' => 'required',
+            'email'=>'required',
             'password' => 'required',
         ]);    
 
@@ -26,7 +27,7 @@ class SessionController extends Controller
         }
 
         throw ValidationException::withMessages([
-            'email' => 'Your provided credentials could not be verified.'
+            'name' => 'Your provided credentials could not be verified.'
         ]);
     }
 
