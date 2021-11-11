@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <eta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Authentication and Task App</title>
     <link rel="stylesheet" href="/trial.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> 
@@ -34,15 +34,15 @@
 
                 <div class="mb-6">
                     <label class="block mb-2 uppercase font-bold text-xs text-gray-700"
-                           for="username"
+                           for="Name"
                     >
-                        Username
+                         Name
                     </label>
 
                     <input class="border border-gray-400 p-2 w-full"
                            type="text"
-                           name="username"
-                           id="username"
+                           name="name"
+                           id="name"
                            required
                     >
                 </div>
